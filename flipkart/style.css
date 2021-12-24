@@ -93,6 +93,13 @@ header{
     margin-top: 10px;
     text-align: center;
 }
+.cal-row img{
+    display: flex;
+    overflow-y: auto;
+    margin-left: 90%;
+    width: 64px;
+    height: 64px;
+}
 .cat-col{
     padding:10px 0px;
     color:rgb(85,83,83);
@@ -123,7 +130,12 @@ header{
     font-weight: 400;
     margin : 1px 1px 1px 1px ;
 }
-
+.com-heading-left h2{
+    font-size: 15px;
+    padding: 5px 0px;
+    color: rgb(145,141,138);
+    font-weight: 200;
+}
 .com-heading-right button{
     width: 90px;
     height: 40px;
@@ -134,6 +146,7 @@ header{
     color: white;
     border-radius: 2px;
 }
+
 #timer {
     display: flex;
     margin: -22px 0px 0px 200px ;
@@ -141,7 +154,8 @@ header{
 .com-row
 {
     display: flex;
-    justify-content: space-evenly;
+  
+    justify-content: space-around;
     width: 100%;
     max-height: 366px;
     margin: 10px 0px;
@@ -151,7 +165,7 @@ header{
     line-height: 22px;
 }
 .com-col img{
-    width: 90px;
+    width: 100px;
     height: 120px;
     transition: 300ms;
 }
@@ -178,3 +192,18 @@ header{
     font-size: 12px;
     font-weight: 100;
 }
+.col-music img{
+    width: 125px;
+    height: 150px;
+}
+#ads{ 
+    height: 250px;
+    width: 150px;
+    
+    display: flex;
+    margin-left:87%;
+    position: absolute;
+    
+}
+
+
