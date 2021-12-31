@@ -1,5 +1,36 @@
 let display = document.getElementById("display");
+let btn0 = Array.from(document.getElementsByClassName("a"));
+// console.log(btn0);
 
+let btn1 = Array.from(document.getElementsByClassName("abc"));
+// console.log(btn1);
+btn1.map((abc)=>{
+  abc.addEventListener("click", (a) => {
+    
+    // console.log(a.target.innerText);
+    switch (a.target.innerText)
+    {
+      case"sin":
+        
+        display.innerText = Math.sin(display.innerText);
+      break;
+      case"cos":
+        display.innerText = Math.cos(display.innerText);
+        break;
+      case"tan":
+        display.innerText = Math.tan(display.innerText);
+        break;
+      case"rand":
+        display.innerText = Math.random(display.innerText);
+        break;
+        case"ceil":
+          display.innerText = Math.ceil(display.innerText);
+        case"floor":
+          display.innerText = Math.floor(display.innerText);
+    }
+  })
+
+})
 let buttons = Array.from(document.getElementsByClassName("button"));
 let π = 3.14;
 function fact(num) {
@@ -16,14 +47,7 @@ function echeck()
 //    console.log(check);
     return check ;
 }
-// function checkx()
-// {
-    
-//     console.log(clicked);
-//     let check = display.innerText = (Math.abs(display.innerText));
-//     console.log(check);
-//     return check;
-// }
+
 function check(value) {
   console.log(value);
   let isvalid;
@@ -31,7 +55,7 @@ function check(value) {
 
   let lastchar = value.charAt(value.length - 1);
 
-  // value.includes(char)
+
 
   if (chList.includes(lastchar)) {
     isvalid = false;
@@ -46,14 +70,11 @@ function pi()
 {
     let picheck = display.innerText * 3.14 ;
     return(picheck);
-    //console.log(picheck);
+  
 }
 buttons.map((button) => {
   button.addEventListener("click", (e) => {
-    // console.log('cliked');
-    // console.log(e);
-    // console.log(e.target);
-    // console.log(e.target.innerText);
+    
     switch (e.target.innerText) {
       case "C":
         display.innerText = "";
@@ -98,13 +119,12 @@ buttons.map((button) => {
       case "mod":
         if(check(display.innerText)){
             display.innerText += "%";
-            //display.innerText = display.innerText + "%"
+           
         }
         break;
        
       case "=":
-        // console.log('clicked');
-        // console.log(display.innerText,'jhjhjhjj');
+        
         if (display.innerText.charAt(display.innerText.length - 1) == "!") {
           display.innerText = display.innerText.substring(
             0,
@@ -133,6 +153,7 @@ buttons.map((button) => {
             let b = display.innerText.substring(sign +1 ,display.innerText.length)
             display.innerText = Math.pow(a,b);
         }
+        
        display.innerText = eval(display.innerText);
 
         break;
@@ -140,11 +161,9 @@ buttons.map((button) => {
         if (check(display.innerText)) {
           display.innerText += "!";
         }
-
-        break;
+       break;
       case "e":
         if (check(display.innerText)) {
-        //   display.innerText = display.innerText * 2.718281;
         display.innerText += 'e';
         }
         break;
@@ -173,8 +192,11 @@ buttons.map((button) => {
         break;
         case"xy":
             display.innerText += "←";
-            // display.innerText = Math.pow();
-            //display.innerText = Math.pow(display.innerText);
+            break;
+          case"log":
+          display.innerText = Math.log10(display.innerText);
+         
+            
             break;
         case"x2":
             display.innerText = (display.innerText) * (display.innerText);
@@ -186,9 +208,11 @@ buttons.map((button) => {
             display.innerText = 10 * (display.innerText);
             break;
         case"1⁄x":
-
             display.innerText = "1/";
             break;
+          case"ln":
+            display.innerText = Math.log(display.innerText);
+          break;
       default:
         display.innerText += e.target.innerText;
     }
