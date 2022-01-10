@@ -92,4 +92,4 @@ function countMaxSetBits(left, right)
     return num;
 }
 l = 1; r = 345;
-document.write(countMaxSetBits(l, r));
+console.log(countMaxSetBits(l, r));

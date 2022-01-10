@@ -53,3 +53,29 @@ function add13 ()
 {
     document.getElementById("demo21").innerHTML = add12();
 }
+// -------------------------------------------------------------------------------------
+// arrow function 
+const multiplyby2 = (input) => {return input*2} 
+const output = multiplyby2(3);
+console.log(output);
+// settimeout  
+function printhello() {
+  console.log("Hello");
+}
+setTimeout(printhello,1000);
+console.log("first");
+// settimeout ex-2
+function printhello1(){
+  console.log("first");
+}
+function blockfor1sec(){}
+setTimeout(printhello1,0)
+blockfor1sec();
+console.log("mefirst");
+// then use 
+function display(data)
+{
+  console.log(data);
+}
+const futureData = fetch('https://twitter.com/narendramodi/status/1475883227336220679').then(display())
+console.log("first me");
