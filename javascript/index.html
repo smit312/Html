@@ -1,0 +1,168 @@
+<html>
+        <head>
+            
+            <script>
+                function smit(){
+                    document.getElementById("myFun").innerHTML ="this text is via script -> smit()"
+                }
+            </script>
+        </head>
+
+    <body style="text-align: center;">
+        <h2>My first javascript </h2>
+        <button type="button" onclick="document.getElementById('smit').innerHTML = Date()">
+            click To show current time 
+        </button>
+        <h2 id="smit"></h2>
+        <h2 id="demo">click to welcome the javascript</h2>
+        <button type="button" onclick='document.getElementById("demo").innerHTML = "WELCOME TO THE JAVASCRIPT"'>
+            click!
+        </button><br>
+        <!-- start exapmle of bulb on-off  -->
+        <button onclick="document.getElementById('myImg').src='pic_bulbon.gif'">
+            click to turn on light
+        </button>
+        <img src="pic_bulboff.gif" id="myImg">
+        <button onclick="document.getElementById('myImg').src='pic_bulboff.gif'">
+            click to turn off light
+        </button><br>
+        <!-- end exapmle of bulb on-off  -->
+        <p id="changeStyle">welcome to the simform</p>
+        <button onclick="document.getElementById('changeStyle').style.fontSize='50px'">
+        click to change style 
+        </button>
+        <button onclick="document.getElementById('changeStyle').style.display='none'">
+        click to hide above text
+        </button>
+        <!-- javascript script add in head  -->
+        <p id="myFun">-------</p>
+        <button type="button" onclick="smit()">Click to change</button>
+        <p id="carss"></p>
+        <p id="car11"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+        <p id="demo8">Good Evening!</p>
+        <p id="demo9"></p>
+        <p id="demo10"></p>
+
+        <p id="demo90"></p>
+        <p id="demo20"></p>
+        <p id="demo14"></p>
+        <button onclick="add13()" >Count!</button>
+        <p id="demo21">0</p>
+
+        <!-- script add in body -->
+        <script>
+            function smit1()
+            {
+                document.getElementById("myFun1").innerHTML ="this text is via body -> smit1()"
+            }
+            window.alert(4+5);
+            const cars = ["hyundai","maruti","audi"];
+            cars[0] = "toyota";
+            cars.push("bmw");
+            document.getElementById("carss").innerHTML = cars;
+
+            const car1 = {type:"volvo" , model:502 , color : "white"};
+            car1.color = "yellow";
+            car1.owner = "smit";
+            document.getElementById("car11").innerHTML = "car owner is " + car1.owner;
+            let fname = "smit";
+            let lname = "thakkar";
+            let fulname = fname + " " +lname ;
+            document.getElementById("demo3").innerHTML = fulname ;
+            let checktype = "smit";
+            let checktype1 = 10 ;
+            let checktype2 = ["smit","parth","abc"];
+            let checktype3;
+            console.log(typeof(checktype));
+            console.log(typeof(checktype1));
+            console.log(typeof(checktype2));
+            console.log(typeof(checktype3));
+            const person = {
+                firstname : "smit",
+                lastname : "thakkar",
+                age : 21 ,
+                education : "mca"
+            };
+            document.getElementById("demo4").innerHTML = person.firstname +  " is " + person.age + " years old " ;
+            let txt = "smit";
+            let x1=txt.length;
+            console.log(x1);
+            let str = "Please locate where 'locate' occurs!";
+            document.getElementById("demo5").innerHTML = str.indexOf("locate");
+            const fruit = ["banana","mango","apple","orange"];
+            let flen = fruit.length;
+            let text = "<ul>";
+            for (let i =0;i<flen;i++)
+            {
+                text += "<li>" + fruit[i] + "</li>";
+
+            }
+            text += "</ul>";
+            document.getElementById("demo6").innerHTML = text;
+            const numbers1 = [45, 4, 9, 16, 25];
+            const numbers2 = numbers1.map(myFunction);
+
+            document.getElementById("demo7").innerHTML = numbers2;
+
+            function myFunction(value, index, array) {
+            return value * 2;
+            }
+            if (new Date().getHours() < 18) {
+             document.getElementById("demo8").innerHTML = "Good day!";
+}
+            let day;
+            switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case  6:
+                day = "Saturday";
+            }
+            document.getElementById("demo9").innerHTML = "Today is " + day;
+            const cars10 = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+            let text1 = "";
+            for (let i = 0; i < cars10.length; i++) {
+            text1 += cars10[i] + "<br>";
+            document.getElementById("demo10").innerHTML = text1;
+            }
+        </script>
+        
+        <p id="myFun1">----</p>
+        <button type="button" onclick="smit1()">Click here !</button>
+        <!-- script added external -->
+        <p id="para1">click below button to change paragraph</p>
+        <button type="button" onclick="para()">Click to change paragraph</button>
+
+        <p id="add">click below button to check sum of 4 + 5</p>
+        <button type="button" onclick="document.getElementById('add').innerHTML = 4 + 5 ">
+
+        Click to sum 
+        </button>
+        <h2>window print method</h2>
+        <p>click below button to print entire page</p>
+        <button onclick="window.print()">click to print !</button><br>
+        <button onclick="this.innerHTML=Date()">the time is ??</button>
+    </body>
+    <script src="myScript.js"></script>
+</html>
